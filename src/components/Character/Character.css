@@ -1,0 +1,22 @@
+.Character {
+    border-style: dotted;
+    border-color: rgb(140, 210, 251);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.Character img {
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.Character a {
+    text-decoration: none;
+    margin-bottom: 1rem;
+    color:azure;
+    font-weight: bolder;
+}
+
+.Character a:hover {
+    color:cornflowerblue;
+}

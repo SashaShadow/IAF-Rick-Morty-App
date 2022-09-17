@@ -1,0 +1,33 @@
+
+.CharaDetails {
+    display: grid;
+    margin: 5vh auto;
+    width: 95%;
+    height: 85vh;
+    background: rgba(227, 253, 255, 0.1);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "izq der";
+    /* justify-content: center; */
+    align-items: center;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow: hidden;
+}
+
+.CharaDetails img {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.Volver {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 2rem;
+    color:white;
+    margin-top: 5rem;
+}
+
+.Volver:hover {
+    color:aqua;
+}

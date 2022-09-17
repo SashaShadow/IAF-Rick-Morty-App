@@ -1,0 +1,41 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.Home a {
+    text-decoration: none;
+    color: crimson;
+    font-weight: bolder;
+    font-size: 3rem;
+    /* animation-name: titilar; */
+    animation: titilar 0.310s infinite alternate;
+}
+
+.Home a:hover {
+    color:coral;
+}
+
+@keyframes titilar {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.Home h1 {
+    color: rgb(138, 204, 228);
+    font-weight: bolder;
+    font-size: 3rem;
+}
