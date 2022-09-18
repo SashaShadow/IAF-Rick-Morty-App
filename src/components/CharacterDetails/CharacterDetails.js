@@ -22,7 +22,6 @@ const CharacterDetails = () => {
         const getData = async () => {
             await axios.get(`${charaEndpoint}${id}`)
             .then(chara => {
-                console.log(chara.data);
                 setCharacter(chara.data)
                 setLoader(false);
             })
