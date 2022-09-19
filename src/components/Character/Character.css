@@ -7,7 +7,8 @@
 }
 
 .Character img {
-    padding: 1rem 2rem 1rem 2rem;
+    margin: 0 auto;
+    width: 85%;
 }
 
 .Character a {
