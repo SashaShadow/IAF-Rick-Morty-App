@@ -11,11 +11,7 @@ const CharacterDetails = () => {
     const charaEndpoint = 'https://rickandmortyapi.com/api/character/';
     
     const pageFinder = () => {
-        if (id / 20 <= 1) {
-            return 1;
-        } else {
-            return Math.ceil(id / 20);
-        }
+        return Math.ceil(id / 20);
     }
 
     useEffect(() => {

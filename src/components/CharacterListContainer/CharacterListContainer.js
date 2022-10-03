@@ -11,9 +11,19 @@ const CharacterListContainer = () => {
     const [characters, setCharacters] = useState([]);
     let { pageid } = useParams();
     const [page, setPage] = useState(1); 
+    const [lastPage, setLastPage] = useState(42);
 
     useEffect(() => {
+        const getLastPage = async () => {
+            await axios.get(charaEndpoint)
+            .then(data => {
+                setLastPage(data.data.info.pages);
+            })
+        }
+        getLastPage();
+    }, [lastPage]);
 
+    useEffect(() => {
         if (pageid) {
             setPage(+pageid)
             pageid = null;
@@ -21,7 +31,7 @@ const CharacterListContainer = () => {
     }, [pageid]);
 
     useEffect(() => {    
-        if (page !== 1 && page > 1 && page <= 42) {
+        if (page > 1 && page <= lastPage) {
             charaEndpoint = `https://rickandmortyapi.com/api/character?page=${page}`
         }
         const getCharacters = async () => {
@@ -40,7 +50,7 @@ const CharacterListContainer = () => {
         <>
             <h1 onClick={() => setPage(1)} className="Title">Rick and Morty APP</h1>
             <h1>Todos los personajes</h1>
-            {page > 1 && page < 42? 
+            {page > 1 && page < lastPage? 
             <div>
                 <h1>Página {page}</h1>
                 <div className="Pages">
