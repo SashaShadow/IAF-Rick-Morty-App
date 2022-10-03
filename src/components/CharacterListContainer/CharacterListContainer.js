@@ -24,7 +24,7 @@ const CharacterListContainer = () => {
     }, [lastPage]);
 
     useEffect(() => {
-        if (pageid) {
+        if (pageid <= lastPage) {
             setPage(+pageid)
             pageid = null;
         };
